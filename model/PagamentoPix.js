@@ -1,4 +1,4 @@
-import { Pagamento } from "./Pagamento.js";
+import {Pagamento} from "./Pagamento.js";
 
 export class PagamentoPix extends Pagamento{
 

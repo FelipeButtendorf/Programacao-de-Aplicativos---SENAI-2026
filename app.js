@@ -1,21 +1,18 @@
-import { PagamentoCartao } from "./model/Pagamento.js";
-import { PagamentoPix } from "./model/Pagamento.js";
-import { PagamentoBoleto } from "./model/Pagamento.js";
+import {PagamentoCartao} from "./model/PagamentoCartao.js";
+import {PagamentoPix} from "./model/PagamentoPix.js";
+import {PagamentoBoleto} from "./model/PagamentoBoleto.js";
 
-const pix = new PagamentoPix(1000, "dxcsdfadasndfklald");
+const pix = new PagamentoPix(1000, "kk");
+const cartao = new PagamentoCartao(500, 3244, 2);
+const boleto = new PagamentoBoleto(250, "12345678900")
 
-const cartao = new PagamentoCartao(500,4983,2);
+pix.aplicarDesconto(10);
 
-const boleto = new PagamentoBoleto(250, "12283472345723409");
+const pagamentos = [pix, cartao, boleto]
 
-pix,aplicarDesconto(10);
-
-const pagamentos = [pix,cartao,boleto];
-
-console.log("Pagamentos criados")
+console.log("Pagamentos criados");
 
 for(let i = 0; i < pagamentos.length; i++){
     pagamentos[i].processarPag();
 }
-
-console.log("Pagamentos processados")
+console.log("Pagamento processados")
