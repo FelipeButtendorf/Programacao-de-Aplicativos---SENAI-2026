@@ -3,8 +3,8 @@ import { Alerta } from "./Alerta.js";
 export class AlertaPainel extends Alerta{
     #nomeSetor;
 
-    constructor(mensagem, prioridade, nomeSetor){
-        super(mensagem, prioridade),
+    constructor(mensagem, prioridade, usuario, nomeSetor){
+        super(mensagem, prioridade, usuario);
         this.#nomeSetor = nomeSetor
     }
 

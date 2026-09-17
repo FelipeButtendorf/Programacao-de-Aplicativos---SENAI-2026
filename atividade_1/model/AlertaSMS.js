@@ -2,8 +2,8 @@ import { Alerta } from "./Alerta.js";
 
 export class AlertaSMS extends Alerta{
     #telefone;
-    constructor(mensagem, prioridade, telefone){
-        super(mensagem, prioridade),
+    constructor(mensagem, prioridade, usuario, telefone){
+        super(mensagem, prioridade, usuario);
         this.#telefone = telefone
     }
 

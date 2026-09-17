@@ -2,9 +2,12 @@ export class Alerta {
 
     #mensagem;
     #prioridade;
-    constructor(mensagem, prioridade) {
-        this.mensagem = mensagem;
-        this.prioridade = prioridade;
+    #usuario;
+
+    constructor(mensagem, prioridade, usuario) {
+        this.#mensagem = mensagem;
+        this.#prioridade = prioridade;
+        this.#usuario = usuario;
     }
     
     get getmensagem() {
@@ -13,6 +16,10 @@ export class Alerta {
 
     get getprioridade() {
         return this.#prioridade;
+    }
+
+    get getUsuario() {
+        return this.#usuario;
     }
 
     alterarPrioridade(novaPrioridade) {
